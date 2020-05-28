@@ -1,0 +1,5 @@
+{
+  "apiUrlBase": "https://localhost:5001/api/v1/",
+  "apiKey": "18c316b4-3498-4fa2-a651-c4b5327483b7",
+  "environment": "Development"
+}

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFSettingsJSON.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:viewmodels="clr-namespace:XFSettingsJSON.ViewModels"
+    x:DataType="viewmodels:MainPageViewModel"
+    BackgroundColor="#2B2B2B"
+    mc:Ignorable="d">
+
+    <StackLayout Padding="20" VerticalOptions="Center">
+        <Grid RowSpacing="35">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <pancakeView:PancakeView
+                Grid.Row="0"
+                Padding="16"
+                BackgroundColor="#4998F4"
+                CornerRadius="20"
+                Elevation="4"
+                HasShadow="False">
+                <StackLayout Spacing="0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="XamarinForms"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Configuração de Ambientes"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </StackLayout>
+            </pancakeView:PancakeView>
+            <pancakeView:PancakeView
+                Grid.Row="1"
+                Padding="12"
+                BackgroundColor="White"
+                CornerRadius="20,0,20,20"
+                Elevation="4"
+                HasShadow="False">
+                <Label
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Environment}"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </pancakeView:PancakeView>
+            <pancakeView:PancakeView
+                Grid.Row="1"
+                Margin="0,-22,0,0"
+                Padding="8"
+                BackgroundColor="#F4195D"
+                CornerRadius="{OnPlatform Android='20',
+                                          iOS='14'}"
+                Elevation="4"
+                HasShadow="False"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                WidthRequest="80">
+                <Label
+                    FontSize="Micro"
+                    HorizontalTextAlignment="Center"
+                    Text="Ambiente"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </pancakeView:PancakeView>
+            <pancakeView:PancakeView
+                Grid.Row="2"
+                Padding="12"
+                BackgroundColor="White"
+                CornerRadius="20,0,20,20"
+                Elevation="4"
+                HasShadow="False">
+                <Label
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding ApiUrlBase}"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </pancakeView:PancakeView>
+            <pancakeView:PancakeView
+                Grid.Row="2"
+                Margin="0,-22,0,0"
+                Padding="8"
+                BackgroundColor="#F4195D"
+                CornerRadius="{OnPlatform Android='20',
+                                          iOS='14'}"
+                Elevation="4"
+                HasShadow="False"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                WidthRequest="80">
+                <Label
+                    FontSize="Micro"
+                    HorizontalTextAlignment="Center"
+                    Text="Api Url Base"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </pancakeView:PancakeView>
+            <pancakeView:PancakeView
+                Grid.Row="3"
+                Padding="12"
+                BackgroundColor="White"
+                CornerRadius="20,0,20,20"
+                Elevation="4"
+                HasShadow="False">
+                <Label
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding ApiKey}"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </pancakeView:PancakeView>
+            <pancakeView:PancakeView
+                Grid.Row="3"
+                Margin="0,-22,0,0"
+                Padding="8"
+                BackgroundColor="#F4195D"
+                CornerRadius="{OnPlatform Android='20',
+                                          iOS='14'}"
+                Elevation="4"
+                HasShadow="False"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                WidthRequest="80">
+                <Label
+                    FontSize="Micro"
+                    HorizontalTextAlignment="Center"
+                    Text="Api Key"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </pancakeView:PancakeView>
+        </Grid>
+    </StackLayout>
+</ContentPage>
